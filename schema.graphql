@@ -1,0 +1,79 @@
+type ClaimApproved @entity(immutable: true) {
+  id: Bytes!
+  claimant: Bytes! # address
+  claimId: BigInt! # uint256
+  policyId: BigInt! # uint256
+  coverageAmount: BigInt! # uint256
+  timestamp: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ClaimRejected @entity(immutable: true) {
+  id: Bytes!
+  claimant: Bytes! # address
+  claimId: BigInt! # uint256
+  policyId: BigInt! # uint256
+  timestamp: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ClaimSubmitted @entity(immutable: true) {
+  id: Bytes!
+  claimant: Bytes! # address
+  claimId: BigInt! # uint256
+  policyId: BigInt! # uint256
+  coverageAmount: BigInt! # uint256
+  timestamp: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Log @entity(immutable: true) {
+  id: Bytes!
+  message: String! # string
+  user: Bytes! # address
+  value: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type PolicyBought @entity(immutable: true) {
+  id: Bytes!
+  buyer: Bytes! # address
+  policyId: BigInt! # uint256
+  policyType: Int! # uint8
+  timestamp: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type PolicyTemplateListed @entity(immutable: true) {
+  id: Bytes!
+  provider: Bytes! # address
+  policyId: BigInt! # uint256
+  premium: BigInt! # uint256
+  coverage: BigInt! # uint256
+  expirationDate: BigInt! # uint256
+  policyType: Int! # uint8
+  timestamp: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type PolicyTransferred @entity(immutable: true) {
+  id: Bytes!
+  oldOwner: Bytes! # address
+  newOwner: Bytes! # address
+  tokenId: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

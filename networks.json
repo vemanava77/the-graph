@@ -1,0 +1,8 @@
+{
+  "sepolia": {
+    "InsuranceMarketplace": {
+      "address": "0x954621368d89eb96fb5da8df0de5640a483c4391",
+      "startBlock": 6620860
+    }
+  }
+}
